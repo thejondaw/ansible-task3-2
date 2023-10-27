@@ -1,0 +1,28 @@
+---
+- name: Update DNS and NTP
+  hosts: centos
+  become: True
+  vars:
+    resolv_conf_template: resolv.conf.j2
+    chrony_conf_template: chrony.conf.j2
+
+    hosts_conf_path: /etc/hosts
+    resolf_conf_path: /etc/resolv.conf
+    chrony_conf_path: /etc/chrony.conf
+  tasks:
+  - import_role:
+      name: ansible-role-hosts
+
+  - import_role:
+      name: ansible-role-resolv
+    vars:
+      dns_servers:
+      - 8.8.8.8
+      - 8.8.4.4
+
+  - import_role:
+      name: ansible-role-chronyd
+    vars:
+      ntp_servers:
+      - time1.google.com
+      - time2.google.com

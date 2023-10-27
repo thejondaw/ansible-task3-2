@@ -1,0 +1,5 @@
+---
+- name: Update {{ hosts_conf_path }}
+  lineinfile:
+    path: "{{ hosts_conf_path }}"
+    line: "{{ ansible_host }} {{ inventory_hostname }}"

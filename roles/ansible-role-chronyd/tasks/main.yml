@@ -1,0 +1,7 @@
+---
+- name: Update {{ chrony_conf_path }}
+  template:
+    src: "{{ chrony_conf_template }}"
+    dest: "{{ chrony_conf_path }}"
+  notify:
+  - Restart chronyd
