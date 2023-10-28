@@ -1,5 +1,5 @@
 ---
-- name: Update {{ resolf_conf_path }}
+- name: Update {{ resolv_conf_path }}
   template:
     src: "{{ resolv_conf_template }}"
-    dest: "{{ resolf_conf_path }}"
+    dest: "{{ resolv_conf_path }}"

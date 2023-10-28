@@ -1,4 +1,7 @@
 ---
+resolv_conf_template: resolv.conf.j2
+resolv_conf_path: /etc/resolv.conf
+
 dns_servers:
   - 8.8.8.8
   - 8.8.4.4

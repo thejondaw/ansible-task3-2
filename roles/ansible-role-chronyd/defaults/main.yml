@@ -1,4 +1,7 @@
 ---
+chrony_conf_template: chrony.conf.j2
+chrony_conf_path: /etc/chrony.conf
+
 ntp_servers:
   - time1.google.com
   - time2.google.com

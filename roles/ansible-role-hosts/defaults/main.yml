@@ -1,2 +1,2 @@
 ---
-# Defaults file for ansible-role-hosts
+hosts_conf_path: /etc/hosts
